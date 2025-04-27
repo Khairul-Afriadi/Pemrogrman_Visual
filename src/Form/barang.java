@@ -363,12 +363,6 @@ private DefaultTableModel tabmode;
 
     private void bsimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsimpanActionPerformed
         // TODO add your handling code here:
-        //String jenis = null;
-        //if(rlaki.isSelected()){
-            //jenis = "Laki-Laki";
-        //}else if(rperempuan.isSelected()){
-          //  jenis = "Perempuan";
-        //}
         String sql = "insert into barang values (?,?,?,?,?)";
         try{
             PreparedStatement stat = conn.prepareStatement(sql);
@@ -391,12 +385,7 @@ private DefaultTableModel tabmode;
 
     private void bubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bubahActionPerformed
         // TODO add your handling code here:
-        //String jenis = null;
-        //if(rlaki.isSelected()){
-          //  jenis = "Laki-Laki";
-        //}else if(rperempuan.isSelected()){
-          //  jenis = "Perempuan";
-        //}
+      
         try{
             String sql = "update barang set nm_brg=?,jenis=?,hargabeli=?,hargjualt=? where kd_brg='"+txtkd.getText()+"'";
             PreparedStatement stat = conn.prepareStatement(sql);
@@ -461,11 +450,7 @@ private DefaultTableModel tabmode;
         
         txtkd.setText(a);
         txtnm.setText(b);
-        //if ("Laki-Laki".equals(c)){
-          //  rlaki.setSelected(true);
-        //} else{
-          //  rperempuan.setSelected(true);
-        //}
+        
         cbjenis.setSelectedItem(c);
         txthb.setText(d);
         txthj.setText(e);
