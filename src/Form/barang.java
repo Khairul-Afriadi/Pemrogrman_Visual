@@ -387,7 +387,7 @@ private DefaultTableModel tabmode;
         // TODO add your handling code here:
       
         try{
-            String sql = "update barang set nm_brg=?,jenis=?,hargabeli=?,hargjualt=? where kd_brg='"+txtkd.getText()+"'";
+            String sql = "update barang set nm_brg=?,jenis=?,hargabeli=?,hargajual=? where kd_brg='"+txtkd.getText()+"'";
             PreparedStatement stat = conn.prepareStatement(sql);
             stat.setString(1, txtnm.getText());
             stat.setString(2, cbjenis.getSelectedItem().toString());
